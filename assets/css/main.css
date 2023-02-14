@@ -4027,3 +4027,35 @@ input, select, textarea {
   background-color: rgba(29, 36, 42, 0.9);
   color: white;
 }
+
+
+
+
+
+.topnav_mainpage {
+  background-color: transparent;
+  overflow: hidden;
+  height: 3em;
+}
+
+/* Style the links inside the navigation bar */
+.topnav_mainpage a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 2px 15px;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+/* Change the color of links on hover */
+.topnav_mainpage a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Add a color to the active/current link */
+.topnav_mainpage a.active {
+  background-color: rgba(29, 36, 42, 0.9);
+  color: white;
+}

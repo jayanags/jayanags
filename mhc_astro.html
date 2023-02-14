@@ -6,7 +6,7 @@
 -->
 <html>
 	<head>
-		<title>Astronomy</title>
+		<title>JNS LSB spirals</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
@@ -22,10 +22,11 @@
 						<h1><a href="index.html">Jaya Nagarajan-Swenson</a></h1>
 						<nav id="nav">
 							<div class="topnav">
-								<a class="active" href="astro.html">Astronomy</a>
+								<a href="uva_astro.html">Galaxy interactions</a>
+								<a class="active" href="mhc_astro.html">LSB spirals</a>
 								<a href="bio.html">Ecology</a>
-								<a href="mentorship.html">Mentorship</a>
-								<a href="DEI.html">Diversity, Equity, and Inclusion</a>
+								<a href="mentorship.html">Teaching</a>
+								<a href="DEI.html">DEI</a>
 								<a href="CV.html">CV</a>
 							</div>
 							<!-- <ul>
@@ -58,8 +59,18 @@
 
 								<hr />
 
-								<h3>Atomic hydrogen in UGC628</h3>
-								My first independent project in astronomy used archival VLA data of 21-cm emission to map the atomic hydrogen envelope around low surface-brightness spiral UGC628 (left). I spent seven months learning how to use the Common Astronomy Software Application (CASA) to process L-Band data from 1992. I studied the data reduction pipeline and applied it to my raw data to construct an image. During this project, we realized that we needed additional data, and it was put on hold while we applied for (and were granted) time on the VLA to observe our galaxy. I learned what research was during this project, which is exactly why I pursued it: it was the first time I studied something completely on my own, and it was on a topic that I was fascinated by. </p>
+								<h3>Dark Matter</h3>
+								<div class="col-12"><span class="image fit"><img src="images/image_for_aas.png" alt="" /></span></div>
+								<p style="color:grey;font-size:12px">An optical image of UGC628 with spectra from two locations overlaid. One spectrum does not have enough OIII emission for a velocity measurement, one does. Optical image credit: Legacy Surveys / D. Lang (Perimeter Institute)</p>
+								<p>My senior thesis was the culmination of two years of research on LSB spirals. I explored the their velocity fields, rotation curves, and, ultimately, dark matter content. This research did not stand alone: the MUSCEL project aims to test the hypothesized core-cusp transformation of dark matter haloes. It does so by comparing a galaxy's decomposed star-formation history with its dark matter halo structure. My thesis, a key facet of the project, presented a critical component of the dark matter portion.</p>
+
+								<p>In this project, I used optical IFU spectra from the VIRUS-P instrument at the University of Texas at Austin's McDonald Observatory to pull velocity, rotation, and dark matter content at every radius of my target galaxies. I wrote a pipeline to extract the desired information from each pixel in a galaxy and build velocity fields from that information. I then used <a href="https://www.physics.queensu.ca/Astro/people/Kristine_Spekkens/diskfit/" target="_blank" rel="noopener noreferrer">DiskFit</a> to process my velocity fields and acquire rotation curves for each galaxy, which were paired with known star and gas masses to derive the dark matter distribution in each galaxy.</p>
+
+								<p><span class="image left"><img src="images/undergradsforscale.png" alt="Three students standing next to a 107-inch telescope." /></span>To acquire data for this project, I assisted four observing runs in Fort Davis, Texas, and I have spent full weeks using the 107-inch Harlan J. Smith Telescope. I regularly run calibrations completely independently, using IRAF to set up the telescope and take biases, darks, arc lamp comparisons (for spectra), and flats. I have also successfully observed standard stars and galaxies fainter than the sky behind it. </p>
+
+								<p>For this work, I was one of eighteen students in the class of 2022 who graduated summa cum laude at Mount Holyoke College.</p>
+
+								<center><img src="images/skycam.gif" alt="gif of the sky moving overhead" width="50%"></center>
 
 								<hr />
 
@@ -69,16 +80,11 @@
 								<p>Independent Component Analysis (ICA) is a method used to separate a mixed signal into its component parts by maximizing each signal's negentropy. It was introduced for astronomical images by Meidt et al. (<a href="https://iopscience.iop.org/article/10.1088/0004-637X/744/1/17" target="_blank" rel="noopener noreferrer">2012</a>). We applied ICA to Spitzer IRAC images of LSB spirals at 3.6μm and 4.5μm wavelengths, successfully separating the starlight and the dust light of ~40 galaxies. We then compared the images of starlight and dustlight to Galex images in order to compare the star formation in these galaxies to their hot dust content.</p>
 								<p>To make images compatible with ICA, they had to be meticulously pre-processed. Images were cropped, aligned, and deconvolved to the same FWHM, and then we examined them in SAOImageDS9 to identify three types of regions: areas that the galaxy existed in; areas that could be used for background-subtracting the galaxy; and areas of extraneous light within the galaxy from foreground stars, background galaxies, or residuals from the detector. We are now synthesizing this work into a manuscript.</p>
 
+
 								<hr />
 
-								<h3>OIII rotation curves</h3>
-								<div class="col-12"><span class="image fit"><img src="images/image_for_aas.png" alt="" /></span></div>
-								<p style="color:grey;font-size:12px">An optical image of UGC628 with spectra from two locations overlaid. One spectrum does not have enough OIII emission for a velocity measurement, one does. Optical image credit: Legacy Surveys / D. Lang (Perimeter Institute)</p>
-								<p>I am currently exploring the velocity fields, rotation curves, and, ultimately, dark matter content of LSB spirals. This project has been incredibly exciting to work on. I am using IFU spectra from the VIRUS-P instrument at the University of Texas at Austin's McDonald Observatory to pull redshift, velocity, rotation, and eventually dark matter content at every radius of my target galaxies. I wrote a pipeline to extract the velocity from each pixel by taking a raw spectrum, continuum-subtracting it, modeling the emission lines, calculating redshift, and calculating velocity from that. Pixels are selected and excluded based on their signal to noise ratio, uncertainty values, and flux. Using this pipeline, I can build FITS images of the velocity, redshift, and uncertainties at every location. I am now using <a href="https://www.physics.queensu.ca/Astro/people/Kristine_Spekkens/diskfit/" target="_blank" rel="noopener noreferrer">DiskFit</a> to process my velocity fields to acquire rotation curves for each galaxy, and I will then pair the rotation curves with known star and gas masses to derive dark matter.</p>
-								<p><span class="image left"><img src="images/undergradsforscale.png" alt="Three students standing next to a 107-inch telescope." /></span>To acquire data for this project, I assisted four observing runs in Fort Davis, Texas, and I have spent full weeks using the 107-inch Harlan J. Smith Telescope. I regularly run calibrations completely independently, using IRAF to set up the telescope and take biases, darks, arc lamp comparisons (for spectra), and flats. I have also successfully observed standard stars and galaxies fainter than the sky behind it. </p>
-								<p>This work will be developed as my senior thesis and submitted for honors consideration to the Mount Holyoke College Department of Astronomy.</p>
-
-								<center><img src="images/skycam.gif" alt="gif of the sky moving overhead" width="50%"></center>
+								<h3>Atomic hydrogen in UGC628</h3>
+								My first independent project in astronomy used archival VLA data of 21-cm emission to map the atomic hydrogen envelope around low surface-brightness spiral UGC628 (left). I spent seven months learning how to use the Common Astronomy Software Application (CASA) to process L-Band data from 1992. I studied the data reduction pipeline and applied it to my raw data to construct an image. During this project, we realized that we needed additional data, and it was put on hold while we applied for (and were granted) time on the VLA to observe our galaxy. I learned what research was during this project, which is exactly why I pursued it: it was the first time I studied something completely on my own, and it was on a topic that I was fascinated by. </p>
 
 							</div>
 						</section>
@@ -87,7 +93,7 @@
 				<!-- Footer -->
 					<footer id="footer">
 						<ul class="copyright">
-							<li>&copy; Jaya Nagarajan-Swenson</li><li>Design: <a href="http://html5up.net" target="_blank" rel="noopener noreferrer">HTML5 UP</a></li><li>Updated January 2022.</li>
+							<li>&copy; Jaya Nagarajan-Swenson</li><li>Design: <a href="http://html5up.net" target="_blank" rel="noopener noreferrer">HTML5 UP</a></li><li>Updated January 2023.</li>
 						</ul>
 					</footer>
 
