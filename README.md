@@ -1,5 +1,7 @@
 ### Hi there 👋
 
+My name is Jaya, my pronouns are they/them/theirs, and my website is jayanags.github.io
+
 <!--
 **jayanags/jayanags** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
